@@ -1,35 +1,37 @@
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
-import tailwindcss from "@tailwindcss/vite" // Import the plugin
-import { VitePWA } from "vite-plugin-pwa" // Import the PWA plugin
+import tailwindcss from "@tailwindcss/vite" // Vite plugin for Tailwind CSS integration
+import { VitePWA } from "vite-plugin-pwa" // Vite plugin for Progressive Web App features
 
-// https://vite.dev/config/
+// Vite configuration: https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
-    tailwindcss(), // Add the plugin
+    react(), // Enables React support
+    tailwindcss(), // Integrates Tailwind CSS
     VitePWA({
-      // Add the PWA plugin configuration
-      registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"], // Add your assets here
+      // Configures the Progressive Web App settings
+      registerType: "autoUpdate", // Strategy for service worker updates
+      includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"], // Assets to be precached
       manifest: {
-        name: "My Awesome App", // Replace with your app name
-        short_name: "MyApp", // Replace with your short app name
-        description: "My Awesome App description", // Replace with your app description
-        theme_color: "#ffffff", // Replace with your theme color
+        // Web App Manifest configuration
+        name: "LaTeX Equation Converter", // Full application name
+        short_name: "LaTeXConv", // Short name for homescreen icons
+        description: "Convert LaTeX code to rendered equations.", // App description
+        theme_color: "#ffffff", // Theme color for the app UI
         icons: [
+          // Icons for different resolutions and purposes
           {
-            src: "logo.png", // Path to your 192x192 icon
+            src: "logo.png", // Path to 192x192 icon
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "logo.png", // Path to your 512x512 icon
+            src: "logo.png", // Path to 512x512 icon
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "logo.png", // Path for maskable icon
+            src: "logo.png", // Path for maskable icon (adapts to different icon shapes)
             sizes: "512x512",
             type: "image/png",
             purpose: "maskable",
