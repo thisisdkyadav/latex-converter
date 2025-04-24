@@ -8,7 +8,7 @@ A simple web application built with React, TypeScript, Vite, and Tailwind CSS th
 ## Features
 
 - **Live LaTeX Rendering:** Instantly see your LaTeX code rendered as a mathematical equation.
-- **KaTeX Integration:** Utilizes the fast and easy-to-use KaTeX library for high-quality math typesetting.
+- **KaTeX Integration:** Utilizes the fast and easy-to-use [KaTeX](https://katex.org/) library for high-quality math typesetting.
 - **Dark Mode:** Switch between light and dark themes for comfortable viewing.
 - **Copy Functionality:** Easily copy the LaTeX input or the rendered equation (implementation details might vary).
 - **Responsive Design:** Adapts to different screen sizes.
